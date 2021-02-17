@@ -4,7 +4,7 @@
 
 ## Indhold:
 * [Del-12 // Disable Powershell GPO](#del-12--disable-powershell-gpo)
-* [Del-13 // Hjælpefunktioner](#del-13)
+* [Del-13 // Hjælpefunktioner](#del-13--hjælpefunktioner)
 * [Del-14 // Alias](#del-14)
 * [Del-15 // Ændre server navne og IP](#del-15)
 * [Del-16 // Øget sikkerhed](#del-16)
