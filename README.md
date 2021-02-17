@@ -152,11 +152,14 @@ PS C:\> Get-Service | Sort-Object name | Out-File .\Service.txt
 
 <!-------------------------------------------------------------------- DEL-17 -------------------------------------------------------------------------------------->
 ## [Del-17 // Mappe script](#computer-Serverautomatisering-HF2)
-Følgende script opretter mapper angivet i en text-fil
+Følgende [script](Create-folders.ps1) opretter mapper angivet i [Foldernames.txt](Foldernames.txt)
 ```powershell
-foreach($folder in Get-Content "C:\Scripts\Foldername.txt")
+$root = "C:\DFSRoots\MarketingDocs\Byer"
+
+Foreach($folder in Get-Content "$root\Foldernames.txt")
 {
-    New-Item "C:\scripts\$folder" -ItemType Directory
+    New-Item "$root\$folder" -ItemType Directory -ErrorAction SilentlyContinue
 }
 ```
-![opretter-mapper](images/opretter-mapper.png)
+![ps-opretter-mapperne](images/ps-opretter-mapperne.png)
+![oprettet-mapper](images/oprettet-mapper.png)
