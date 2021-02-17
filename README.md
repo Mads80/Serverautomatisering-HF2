@@ -130,7 +130,7 @@ Kan nu efterfølgende pinge fra Server1 til de nye ip-adresser
 <br/>
 ![ping-fra-server1-til-nye-iper](images/ping-fra-server1-til-nye-iper.png)
 <br/>
-Omdøber Server2 til Server002 (Gentag dette for Server3 også)
+Omdøber Server2 til Server002 (Gentager dette for Server3 også)
 ```powershell
 PS C:\> hostname
 Server2
@@ -142,7 +142,7 @@ Efter en genstart er det nye navn trådt i kraft
 <br/>
 ![nyt-navn-server2-til-server002](images/nyt-navn-server2-til-server002.png)
 
-
+<a href="http://example.com/" target="_blank">example</a>
 <!-------------------------------------------------------------------- DEL-16 -------------------------------------------------------------------------------------->
 ## [Del-16 // Øget sikkerhed](#computer-Serverautomatisering-HF2)
 Opretter en liste over kørende services, sorteret alfabetisk og gemmer den som [service.txt](Service.txt)
