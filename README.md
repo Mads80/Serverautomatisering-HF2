@@ -29,3 +29,17 @@ Click på "Show..." og skriv powershell.exe
 <br/>
 Vores "Disable Powershell" GPO gælder alle Authenticated Users
 ![powershell-disabled](images/powershell-disabled.png)
+
+## [Del-13 // Hjælpefunktioner](#computer-Serverautomatisering-HF2)
+En cmdlet - udtalt "command-let" er en lille, let kommando, der bruges i Windows PowerShell-miljøet. En cmdlet findes typisk som et lille script, der er beregnet til at udføre en enkelt specifik funktion, såsom coping filer og skift af mapper. En cmdlet og dens relevante parametre kan indtastes i en PowerShell-kommandolinje til øjeblikkelig udførelse eller inkluderes som en del af et længere PowerShell-script, der kan udføres som ønsket.
+<br/>
+Opretter ny computer med New-ADComputer
+```
+PS C:\Users\Administrator> New-ADComputer
+cmdlet New-ADComputer at command pipeline position 1
+Supply values for the following parameters:
+Name: PC1
+```
+Herunder kan man se den nyoprettede computer
+<br/>
+![opretter-ny-computer-med-ps](images/opretter-ny-computer-med-ps.png)
