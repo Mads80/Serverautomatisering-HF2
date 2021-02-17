@@ -103,7 +103,7 @@ PS C:\Users> Set-Alias -Name np -Value C:\Windows\notepad.exe
 
 PS C:\Users> Get-Alias -Name np
 
-CommandType     Name                                               Version    Source                                                                           
------------     ----                                               -------    ------                                                                           
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------                     
 Alias           np -> notepad.exe
 ```
