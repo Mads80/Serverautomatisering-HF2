@@ -42,7 +42,7 @@ cmdlet New-ADComputer at command pipeline position 1
 Supply values for the following parameters:
 Name: PC1
 ```
-Herunder kan man se den nyoprettede computer
+Den nyoprettede computer
 <br/>
 ![opretter-ny-computer-med-ps](images/opretter-ny-computer-med-ps.png)
 <br/>
@@ -53,18 +53,18 @@ cmdlet New-ADUser at command pipeline position 1
 Supply values for the following parameters:
 Name: Bruger1
 ```
-Herunder kan man se den nyoprettede bruger
+Den nyoprettede bruger
 <br/>
 ![opretter-ny-bruger-med-ps](images/opretter-ny-bruger-med-ps.png)
 <br/>
-Opretter my OU med New-ADOrganizationalUnit
+Opretter ny OU med New-ADOrganizationalUnit
 ```powershell
 PS C:\> New-ADOrganizationalUnit
 cmdlet New-ADOrganizationalUnit at command pipeline position 1
 Supply values for the following parameters:
 Name: OU1
 ```
-Herunder kan man se den nyoprettede OU
+Den nyoprettede OU
 <br/>
 ![opretter-ny-ou-med-ps](images/opretter-ny-ou-med-ps.png)
 
@@ -104,12 +104,12 @@ PS C:\> Set-Alias -Name np -Value C:\Windows\notepad.exe
 PS C:\> Get-Alias -Name np
 
 CommandType     Name                                               Version    Source
------------     ----                                               -------    ------                     
+-----------     ----                                               -------    ------
 Alias           np -> notepad.exe
 ```
 
 <!-------------------------------------------------------------------- DEL-15 -------------------------------------------------------------------------------------->
-## [Del-15 // Ændre server navn og ip-adresse](#computer-Serverautomatisering-HF2)
+## [Del-15 // Ændrer server navn og ip-adresse](#computer-Serverautomatisering-HF2)
 Ændrer ip-adresse på Server2 og Server3
 ```powershell
 PS C:\> Get-NetAdapter
