@@ -145,7 +145,7 @@ Efter en genstart er det nye navn trådt i kraft
 
 <!-------------------------------------------------------------------- DEL-15 -------------------------------------------------------------------------------------->
 ## [Del-16 // Øget sikkerhed](#computer-Serverautomatisering-HF2)
-Opretter en liste over kørende services, sorteret alfabetisk og gemmer den som [service.txt](service.txt)
+Opretter en liste over kørende services, sorteret alfabetisk og gemmer den som [service.txt](Service.txt)
 ```powershell
 PS C:\> Get-Service | Sort-Object name | Out-File .\Service.txt
 ```
