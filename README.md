@@ -9,7 +9,7 @@
 * [Del-15 // Ændre server navn og ip-adresse](#del-15--ændre-server-navn-og-ip-adresse)
 * [Del-16 // Øget sikkerhed](#del-16--øget-sikkerhed)
 * [Del-17 // Mappe script](#del-17--mappe-script)
-* [Del-18 // OU script](#del-18--ou-script)
+* [Del-18 // Opret OU'er](#del-18--opret-ou'er)
 * [Del-19 // Automatisering](#del-19)
 * [Del-20 // Whatif](#del-20)
 * [Del-21 // Windows Recycle Bin](#del-21)
@@ -165,7 +165,7 @@ Foreach($folder in Get-Content "$root\Foldernames.txt")
 ![oprettet-mapper](images/oprettet-mapper.png)
 
 <!-------------------------------------------------------------------- DEL-18 -------------------------------------------------------------------------------------->
-## [Del-18 // OU script](#computer-Serverautomatisering-HF2)
+## [Del-18 // Opret OU'er](#computer-Serverautomatisering-HF2)
 ```powershell
 New-ADOrganizationalUnit -Name Odense -Path "DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
 New-ADOrganizationalUnit -Name Marketing -Path "OU=Odense,DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
