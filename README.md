@@ -152,18 +152,11 @@ PS C:\> Get-Service | Sort-Object name | Out-File .\Service.txt
 
 <!-------------------------------------------------------------------- DEL-17 -------------------------------------------------------------------------------------->
 ## [Del-17 // Mappe script](#computer-Serverautomatisering-HF2)
-Følgende [script](Oprette-mapper.ps1) opretter 3 mapper der hver især har 3 undermapper
+Følgende script opretter mapper angivet i en text-fil
 ```powershell
-new-item -type directory -path C:\Byer\Odense\Salg -Force
-new-item -type directory -path C:\Byer\Odense\Marketing -Force
-new-item -type directory -path C:\Byer\Odense\Produktion -Force
-
-new-item -type directory -path C:\Byer\Vejle\Salg -Force
-new-item -type directory -path C:\Byer\Vejle\Marketing -Force
-new-item -type directory -path C:\Byer\Vejle\Produktion -Force
-
-new-item -type directory -path C:\Byer\Svenborg\Salg -Force
-new-item -type directory -path C:\Byer\Svenborg\Marketing -Force
-new-item -type directory -path C:\Byer\Svenborg\Produktion -Force
+foreach($folder in Get-Content "C:\Scripts\Foldername.txt")
+{
+    New-Item "C:\scripts\$folder" -ItemType Directory
+}
 ```
 ![opretter-mapper](images/opretter-mapper.png)
