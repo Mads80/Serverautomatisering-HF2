@@ -166,4 +166,4 @@ new-item -type directory -path C:\Byer\Svenborg\Salg -Force
 new-item -type directory -path C:\Byer\Svenborg\Marketing -Force
 new-item -type directory -path C:\Byer\Svenborg\Produktion -Force
 ```
-![opretter-mapper](images/opretter-mapper)
+![opretter-mapper](images/opretter-mapper.png)
