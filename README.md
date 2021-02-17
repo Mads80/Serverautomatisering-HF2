@@ -70,4 +70,14 @@ Herunder kan man se den nyoprettede OU
 
 <!-------------------------------------------------------------------- DEL-14 -------------------------------------------------------------------------------------->
 ## [Del-14 // Alias](#computer-Serverautomatisering-HF2)
-asdf
+Et PowerShell-alias er et andet navn, der er tildelt en cmdlet. PowerShell-cmdletnavne kan være besværlig at skrive og bruge. For at minimere indtastning og for at gøre det lettere for brugere der er vant til andre shells som f.eks. CMD eller Unix-shells, understøtter Windows PowerShell begrebet et alias. Simpelthen alias er et alternativt navn til en cmdlet.
+<br/>
+<br/>
+Skriv følgende for en liste af indbyggede Alias
+```
+PS C:\Users\Administrator> Get-Alias
+```
+Exporterer ovestående liste til [Alias.txt](Alias.txt)
+```
+PS C:\Users\Administrator> Get-Alias | Out-File -FilePath .\Desktop\Alias.txt
+```
