@@ -74,15 +74,15 @@ Et PowerShell-alias er et andet navn, der er tildelt en cmdlet. PowerShell-cmdle
 <br/>
 <br/>
 Skriv følgende for en liste af indbyggede Alias
-```
+```powershell
 PS C:\> Get-Alias
-```powershell
+```
 Exporterer ovestående liste til [Alias.txt](Alias.txt)
-```
-PS C:\> Get-Alias | Out-File -FilePath .\Desktop\Alias.txt
 ```powershell
-Opretter egne Alias
+PS C:\> Get-Alias | Out-File -FilePath .\Desktop\Alias.txt
 ```
+Opretter egne Alias
+```powershell
 PS C:\Users\Administrator> Set-Alias
 cmdlet Set-Alias at command pipeline position 1
 Supply values for the following parameters:
