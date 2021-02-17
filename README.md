@@ -109,7 +109,7 @@ Alias           np -> notepad.exe
 ```
 
 <!-------------------------------------------------------------------- DEL-15 -------------------------------------------------------------------------------------->
-## [Del-14 // Ændre server navne og ip-adresse](#computer-Serverautomatisering-HF2)
+## [Del-14 // Ændre server navn og ip-adresse](#computer-Serverautomatisering-HF2)
 ```
 PS C:\> Set-NetIPAddress -InterfaceIndex 15 -IPAddress 192.168.10.22 -PrefixLength 24
 ```
