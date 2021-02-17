@@ -5,7 +5,7 @@
 ## Indhold:
 * [Del-12 // Disable Powershell GPO](#del-12--disable-powershell-gpo)
 * [Del-13 // Hjælpefunktioner](#del-13--hjælpefunktioner)
-* [Del-14 // Alias](#del-14)
+* [Del-14 // Alias](#del-14--Alias)
 * [Del-15 // Ændre server navne og IP](#del-15)
 * [Del-16 // Øget sikkerhed](#del-16)
 * [Del-17 // Scripts](#del-17)
@@ -30,6 +30,7 @@ Click på "Show..." og skriv powershell.exe
 Vores "Disable Powershell" GPO gælder alle Authenticated Users
 ![powershell-disabled](images/powershell-disabled.png)
 
+<!-------------------------------------------------------------------- DEL-13 -------------------------------------------------------------------------------------->
 ## [Del-13 // Hjælpefunktioner](#computer-Serverautomatisering-HF2)
 En cmdlet - udtalt "command-let" er en lille, let kommando, der bruges i Windows PowerShell-miljøet. En cmdlet findes typisk som et lille script, der er beregnet til at udføre en enkelt specifik funktion, såsom coping filer og skift af mapper. En cmdlet og dens relevante parametre kan indtastes i en PowerShell-kommandolinje til øjeblikkelig udførelse eller inkluderes som en del af et længere PowerShell-script, der kan udføres som ønsket.
 <br/>
@@ -66,3 +67,7 @@ Name: OU1
 Herunder kan man se den nyoprettede OU
 <br/>
 ![opretter-ny-ou-med-ps](images/opretter-ny-ou-med-ps.png)
+
+<!-------------------------------------------------------------------- DEL-14 -------------------------------------------------------------------------------------->
+## [Del-14 // Alias](#computer-Serverautomatisering-HF2)
+asdf
