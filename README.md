@@ -19,7 +19,7 @@
 
 <!-------------------------------------------------------------------- DEL-12 -------------------------------------------------------------------------------------->
 ## [Del-12 // Disable Powershell GPO](#computer-Serverautomatisering-HF2)
-Opret en ny GPO og gå til følgende:
+Opretter en ny GPO og går til følgende:
 ```powershell
 User Configuration > Administrative Templates > System > Don’t run specified Windows applications
 ```
@@ -137,3 +137,6 @@ Server2
 PS C:\> Rename-Computer -NewName "Server002"
 WARNING: The changes will take effect after you restart the computer Server2.
 ```
+Efter en genstart er det nye navn trådt i kraft
+<br/>
+![nyt-navn-server2-til-server002](images/nyt-navn-server2-til-server002.png)
