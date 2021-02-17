@@ -8,7 +8,7 @@
 * [Del-14 // Alias](#del-14--Alias)
 * [Del-15 // Ændre server navn og ip-adresse](#del-15--ændre-server-navn-og-ip-adresse)
 * [Del-16 // Øget sikkerhed](#del-16--øget-sikkerhed)
-* [Del-17 // Scripts](#del-17)
+* [Del-17 // Mappe scripts](#del-17--mappe-script)
 * [Del-18 // OU](#del-18)
 * [Del-19 // Automatisering](#del-19)
 * [Del-20 // Whatif](#del-20)
@@ -143,9 +143,26 @@ Efter en genstart er det nye navn trådt i kraft
 ![nyt-navn-server2-til-server002](images/nyt-navn-server2-til-server002.png)
 
 
-<!-------------------------------------------------------------------- DEL-15 -------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------- DEL-16 -------------------------------------------------------------------------------------->
 ## [Del-16 // Øget sikkerhed](#computer-Serverautomatisering-HF2)
 Opretter en liste over kørende services, sorteret alfabetisk og gemmer den som [service.txt](Service.txt)
 ```powershell
 PS C:\> Get-Service | Sort-Object name | Out-File .\Service.txt
+```
+
+<!-------------------------------------------------------------------- DEL-17 -------------------------------------------------------------------------------------->
+## [Del-17 // Mappe script](#computer-Serverautomatisering-HF2)
+Følgende [script](Oprette-mapper.ps1) opretter 3 mapper der hver især har 3 undermapper
+```powershell
+new-item -type directory -path C:\Byer\Odense\Salg -Force
+new-item -type directory -path C:\Byer\Odense\Marketing -Force
+new-item -type directory -path C:\Byer\Odense\Produktion -Force
+
+new-item -type directory -path C:\Byer\Vejle\Salg -Force
+new-item -type directory -path C:\Byer\Vejle\Marketing -Force
+new-item -type directory -path C:\Byer\Vejle\Produktion -Force
+
+new-item -type directory -path C:\Byer\Svenborg\Salg -Force
+new-item -type directory -path C:\Byer\Svenborg\Marketing -Force
+new-item -type directory -path C:\Byer\Svenborg\Produktion -Force
 ```
