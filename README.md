@@ -75,11 +75,11 @@ Et PowerShell-alias er et andet navn, der er tildelt en cmdlet. PowerShell-cmdle
 <br/>
 Skriv følgende for en liste af indbyggede Alias
 ```
-PS C:\Users\Administrator> Get-Alias
+PS C:\> Get-Alias
 ```
 Exporterer ovestående liste til [Alias.txt](Alias.txt)
 ```
-PS C:\Users\Administrator> Get-Alias | Out-File -FilePath .\Desktop\Alias.txt
+PS C:\> Get-Alias | Out-File -FilePath .\Desktop\Alias.txt
 ```
 Opretter egne Alias
 ```
@@ -99,9 +99,9 @@ C:\Users\Administrator
 ```
 Alias der åbner notepad.exe, notepad kan efterfølgende åbnes ved bare at skrive "np"
 ```
-PS C:\Users> Set-Alias -Name np -Value C:\Windows\notepad.exe
+PS C:\> Set-Alias -Name np -Value C:\Windows\notepad.exe
 
-PS C:\Users> Get-Alias -Name np
+PS C:\> Get-Alias -Name np
 
 CommandType     Name                                               Version    Source
 -----------     ----                                               -------    ------                     
