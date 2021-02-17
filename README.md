@@ -25,3 +25,5 @@ User Configuration > Administrative Templates > System > Don’t run specified W
 ```
 Click på "Show..." og skriv powershell.exe
 ![gpo-disable-powershell](images/gpo-disable-powershell.png)
+Vores "Disable Powershell" GPO gælder alle Authenticated Users
+![powershell-disabled](images/powershell-disabled.png)
