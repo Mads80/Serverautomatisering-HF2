@@ -7,7 +7,7 @@
 * [Del-13 // Hjælpefunktioner](#del-13--hjælpefunktioner)
 * [Del-14 // Alias](#del-14--Alias)
 * [Del-15 // Ændre server navn og ip-adresse](#del-15--ændre-server-navn-og-ip-adresse)
-* [Del-16 // Øget sikkerhed](#del-16)
+* [Del-16 // Øget sikkerhed](#del-16--øget-sikkerhed)
 * [Del-17 // Scripts](#del-17)
 * [Del-18 // OU](#del-18)
 * [Del-19 // Automatisering](#del-19)
