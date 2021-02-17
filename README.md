@@ -77,7 +77,7 @@ Skriv følgende for en liste af indbyggede Alias
 ```powershell
 PS C:\> Get-Alias
 ```
-Exporterer ovestående liste til [Alias.txt](Alias.txt)
+Exporterer ovestående liste til [Alias.txt](Alias.txt){:target="_blank"}
 ```powershell
 PS C:\> Get-Alias | Out-File -FilePath .\Desktop\Alias.txt
 ```
@@ -142,7 +142,7 @@ Efter en genstart er det nye navn trådt i kraft
 <br/>
 ![nyt-navn-server2-til-server002](images/nyt-navn-server2-til-server002.png)
 
-<a href="http://google.com/" target="_blank">example</a>
+
 <!-------------------------------------------------------------------- DEL-16 -------------------------------------------------------------------------------------->
 ## [Del-16 // Øget sikkerhed](#computer-Serverautomatisering-HF2)
 Opretter en liste over kørende services, sorteret alfabetisk og gemmer den som [service.txt](Service.txt)
