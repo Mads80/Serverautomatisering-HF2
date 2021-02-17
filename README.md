@@ -110,6 +110,22 @@ Alias           np -> notepad.exe
 
 <!-------------------------------------------------------------------- DEL-15 -------------------------------------------------------------------------------------->
 ## [Del-15 // Ændre server navn og ip-adresse](#computer-Serverautomatisering-HF2)
+Ændrer ip-adresse på Server2 og Server3
 ```
-PS C:\> Set-NetIPAddress -InterfaceIndex 15 -IPAddress 192.168.10.22 -PrefixLength 24
+PS C:\> Get-NetAdapter
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+Ethernet0                 Intel(R) 82574L Gigabit Network Conn...      15 Up           00-0C-29-8F-4B-92         1 Gbps
+PS C:\> New-NetIPAddress -InterfaceIndex 15 -IPAddress 192.168.10.22 -PrefixLength 24
+
+PS C:\> Get-NetAdapter
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+Ethernet0                 Intel(R) 82574L Gigabit Network Conn...      14 Up           00-0C-29-69-48-FC         1 Gbps
+PS C:\> New-NetIPAddress -InterfaceIndex 14 -IPAddress 192.168.10.33 -PrefixLength 24
 ```
+Kan nu efterfølgende pinge fra Server1 til de nye ip-adresser
+<br/>
+![ping-fra-server1-til-nye-iper](images/ping-fra-server1-til-nye-iper.png)
