@@ -37,7 +37,7 @@ En cmdlet - udtalt "command-let" er en lille, let kommando, der bruges i Windows
 <br/>
 Opretter ny computer med New-ADComputer
 ```
-PS C:\Users\Administrator> New-ADComputer
+PS C:\>  New-ADComputer
 cmdlet New-ADComputer at command pipeline position 1
 Supply values for the following parameters:
 Name: PC1
@@ -48,7 +48,7 @@ Herunder kan man se den nyoprettede computer
 <br/>
 Opretter ny bruger med New-ADUser
 ```
-PS C:\Users\Administrator> New-ADUser
+PS C:\> New-ADUser
 cmdlet New-ADUser at command pipeline position 1
 Supply values for the following parameters:
 Name: Bruger1
@@ -59,7 +59,7 @@ Herunder kan man se den nyoprettede bruger
 <br/>
 Opretter my OU med New-ADOrganizationalUnit
 ```
-PS C:\Users\Administrator> New-ADOrganizationalUnit
+PS C:\> New-ADOrganizationalUnit
 cmdlet New-ADOrganizationalUnit at command pipeline position 1
 Supply values for the following parameters:
 Name: OU1
