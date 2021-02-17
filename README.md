@@ -33,6 +33,7 @@ Vores "Disable Powershell" GPO gælder alle Authenticated Users
 ## [Del-13 // Hjælpefunktioner](#computer-Serverautomatisering-HF2)
 En cmdlet - udtalt "command-let" er en lille, let kommando, der bruges i Windows PowerShell-miljøet. En cmdlet findes typisk som et lille script, der er beregnet til at udføre en enkelt specifik funktion, såsom coping filer og skift af mapper. En cmdlet og dens relevante parametre kan indtastes i en PowerShell-kommandolinje til øjeblikkelig udførelse eller inkluderes som en del af et længere PowerShell-script, der kan udføres som ønsket.
 <br/>
+<br/>
 Opretter ny computer med New-ADComputer
 ```
 PS C:\Users\Administrator> New-ADComputer
@@ -43,3 +44,25 @@ Name: PC1
 Herunder kan man se den nyoprettede computer
 <br/>
 ![opretter-ny-computer-med-ps](images/opretter-ny-computer-med-ps.png)
+<br/>
+Opretter ny bruger med New-ADUser
+```
+PS C:\Users\Administrator> New-ADUser
+cmdlet New-ADUser at command pipeline position 1
+Supply values for the following parameters:
+Name: Bruger1
+```
+Herunder kan man se den nyoprettede bruger
+<br/>
+![opretter-ny-bruger-med-ps](images/opretter-ny-bruger-med-ps.png)
+
+Opretter my OU med New-ADOrganizationalUnit
+```
+PS C:\Users\Administrator> New-ADOrganizationalUnit
+cmdlet New-ADOrganizationalUnit at command pipeline position 1
+Supply values for the following parameters:
+Name: OU1
+```
+Herunder kan man se den nyoprettede OU
+<br/>
+![opretter-ny-ou-med-ps](images/opretter-ny-ou-med-ps.png)
