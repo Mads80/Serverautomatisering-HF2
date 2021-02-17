@@ -6,7 +6,7 @@
 * [Del-12 // Disable Powershell GPO](#del-12--disable-powershell-gpo)
 * [Del-13 // Hjælpefunktioner](#del-13--hjælpefunktioner)
 * [Del-14 // Alias](#del-14--Alias)
-* [Del-15 // Ændre server navne og ip-adresse](#del-15)
+* [Del-15 // Ændre server navn og ip-adresse](#del-15--ændre-server-navn-og-ip-adresse)
 * [Del-16 // Øget sikkerhed](#del-16)
 * [Del-17 // Scripts](#del-17)
 * [Del-18 // OU](#del-18)
@@ -110,3 +110,6 @@ Alias           np -> notepad.exe
 
 <!-------------------------------------------------------------------- DEL-15 -------------------------------------------------------------------------------------->
 ## [Del-14 // Ændre server navne og ip-adresse](#computer-Serverautomatisering-HF2)
+```
+PS C:\> Set-NetIPAddress -InterfaceIndex 15 -IPAddress 192.168.10.22 -PrefixLength 24
+```
