@@ -9,7 +9,7 @@
 * [Del-15 // Ændre server navn og ip-adresse](#del-15--ændre-server-navn-og-ip-adresse)
 * [Del-16 // Øget sikkerhed](#del-16--øget-sikkerhed)
 * [Del-17 // Mappe script](#del-17--mappe-script)
-* [Del-18 // Opret OU'er](#del-18--opret-ou'er)
+* [Del-18 // Opret OU'er](#del-18--opret-ouer)
 * [Del-19 // Automatisering](#del-19)
 * [Del-20 // Whatif](#del-20)
 * [Del-21 // Windows Recycle Bin](#del-21)
