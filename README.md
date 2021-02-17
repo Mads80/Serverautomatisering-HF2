@@ -6,7 +6,7 @@
 * [Del-12 // Disable Powershell GPO](#del-12--disable-powershell-gpo)
 * [Del-13 // Hjælpefunktioner](#del-13--hjælpefunktioner)
 * [Del-14 // Alias](#del-14--Alias)
-* [Del-15 // Ændre server navne og IP](#del-15)
+* [Del-15 // Ændre server navne og ip-adresse](#del-15)
 * [Del-16 // Øget sikkerhed](#del-16)
 * [Del-17 // Scripts](#del-17)
 * [Del-18 // OU](#del-18)
@@ -107,3 +107,6 @@ CommandType     Name                                               Version    So
 -----------     ----                                               -------    ------                     
 Alias           np -> notepad.exe
 ```
+
+<!-------------------------------------------------------------------- DEL-15 -------------------------------------------------------------------------------------->
+## [Del-14 // Ændre server navne og ip-adresse](#computer-Serverautomatisering-HF2)
