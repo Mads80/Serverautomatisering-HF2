@@ -81,3 +81,29 @@ Exporterer ovestående liste til [Alias.txt](Alias.txt)
 ```
 PS C:\Users\Administrator> Get-Alias | Out-File -FilePath .\Desktop\Alias.txt
 ```
+Opretter egne Alias
+```
+PS C:\Users\Administrator> Set-Alias
+cmdlet Set-Alias at command pipeline position 1
+Supply values for the following parameters:
+Name: loc
+Value: Get-Location
+```
+Kan nu se min nuværende lokation ved bare at skrive "loc" istedet for Get-Location
+```
+PS C:\Users\Administrator> loc
+
+Path                  
+----                  
+C:\Users\Administrator
+```
+Alias der åbner notepad.exe, notepad kan efterfølgende åbnes ved bare at skrive "np"
+```
+PS C:\Users> Set-Alias -Name np -Value C:\Windows\notepad.exe
+
+PS C:\Users> Get-Alias -Name np
+
+CommandType     Name                                               Version    Source                                                                           
+-----------     ----                                               -------    ------                                                                           
+Alias           np -> notepad.exe
+```
