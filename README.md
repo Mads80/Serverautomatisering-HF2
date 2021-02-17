@@ -20,7 +20,7 @@
 <!-------------------------------------------------------------------- DEL-12 -------------------------------------------------------------------------------------->
 ## [Del-12 // Disable Powershell GPO](#computer-Serverautomatisering-HF2)
 Opret en ny GPO og gå til følgende:
-```
+```powershell
 User Configuration > Administrative Templates > System > Don’t run specified Windows applications
 ```
 Click på "Show..." og skriv powershell.exe
@@ -36,7 +36,7 @@ En cmdlet - udtalt "command-let" er en lille, let kommando, der bruges i Windows
 <br/>
 <br/>
 Opretter ny computer med New-ADComputer
-```
+```powershell
 PS C:\>  New-ADComputer
 cmdlet New-ADComputer at command pipeline position 1
 Supply values for the following parameters:
@@ -47,7 +47,7 @@ Herunder kan man se den nyoprettede computer
 ![opretter-ny-computer-med-ps](images/opretter-ny-computer-med-ps.png)
 <br/>
 Opretter ny bruger med New-ADUser
-```
+```powershell
 PS C:\> New-ADUser
 cmdlet New-ADUser at command pipeline position 1
 Supply values for the following parameters:
@@ -58,7 +58,7 @@ Herunder kan man se den nyoprettede bruger
 ![opretter-ny-bruger-med-ps](images/opretter-ny-bruger-med-ps.png)
 <br/>
 Opretter my OU med New-ADOrganizationalUnit
-```
+```powershell
 PS C:\> New-ADOrganizationalUnit
 cmdlet New-ADOrganizationalUnit at command pipeline position 1
 Supply values for the following parameters:
@@ -76,11 +76,11 @@ Et PowerShell-alias er et andet navn, der er tildelt en cmdlet. PowerShell-cmdle
 Skriv følgende for en liste af indbyggede Alias
 ```
 PS C:\> Get-Alias
-```
+```powershell
 Exporterer ovestående liste til [Alias.txt](Alias.txt)
 ```
 PS C:\> Get-Alias | Out-File -FilePath .\Desktop\Alias.txt
-```
+```powershell
 Opretter egne Alias
 ```
 PS C:\Users\Administrator> Set-Alias
@@ -90,7 +90,7 @@ Name: loc
 Value: Get-Location
 ```
 Kan nu se min nuværende lokation ved bare at skrive "loc" istedet for Get-Location
-```
+```powershell
 PS C:\Users\Administrator> loc
 
 Path                  
@@ -98,7 +98,7 @@ Path
 C:\Users\Administrator
 ```
 Alias der åbner notepad.exe, notepad kan efterfølgende åbnes ved bare at skrive "np"
-```
+```powershell
 PS C:\> Set-Alias -Name np -Value C:\Windows\notepad.exe
 
 PS C:\> Get-Alias -Name np
@@ -111,7 +111,7 @@ Alias           np -> notepad.exe
 <!-------------------------------------------------------------------- DEL-15 -------------------------------------------------------------------------------------->
 ## [Del-15 // Ændre server navn og ip-adresse](#computer-Serverautomatisering-HF2)
 Ændrer ip-adresse på Server2 og Server3
-```
+```powershell
 PS C:\> Get-NetAdapter
 
 Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
@@ -129,3 +129,11 @@ PS C:\> New-NetIPAddress -InterfaceIndex 14 -IPAddress 192.168.10.33 -PrefixLeng
 Kan nu efterfølgende pinge fra Server1 til de nye ip-adresser
 <br/>
 ![ping-fra-server1-til-nye-iper](images/ping-fra-server1-til-nye-iper.png)
+<br/>
+```powershell
+PS C:\> hostname
+Server2
+
+PS C:\> Rename-Computer -NewName "Server002"
+WARNING: The changes will take effect after you restart the computer Server2.
+```
