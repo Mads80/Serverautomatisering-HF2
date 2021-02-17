@@ -19,3 +19,8 @@
 
 <!-------------------------------------------------------------------- DEL-12 -------------------------------------------------------------------------------------->
 ## [Del-12 // Disable Powershell GPO](#computer-Serverautomatisering-HF2)
+Opret en ny GPO og gå til følgende:
+```
+User Configuration > Administrative Templates > System > Don’t run specified Windows applications
+```
+![gpo-disable-powershell](images/gpo-disable-powershell.png)
