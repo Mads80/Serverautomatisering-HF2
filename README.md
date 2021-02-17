@@ -55,7 +55,7 @@ Name: Bruger1
 Herunder kan man se den nyoprettede bruger
 <br/>
 ![opretter-ny-bruger-med-ps](images/opretter-ny-bruger-med-ps.png)
-
+<br/>
 Opretter my OU med New-ADOrganizationalUnit
 ```
 PS C:\Users\Administrator> New-ADOrganizationalUnit
