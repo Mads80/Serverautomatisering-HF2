@@ -167,5 +167,22 @@ Foreach($folder in Get-Content "$root\Foldernames.txt")
 <!-------------------------------------------------------------------- DEL-18 -------------------------------------------------------------------------------------->
 ## [Del-18 // OU script](#computer-Serverautomatisering-HF2)
 ```powershell
+New-ADOrganizationalUnit -Name Odense -Path "DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name Marketing -Path "OU=Odense,DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name Salg -Path "OU=Odense,DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name Produktion -Path "OU=Odense,DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
 
+
+New-ADOrganizationalUnit -Name Svendborg -Path "DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name Marketing -Path "OU=Svendborg,DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name Salg -Path "OU=Svendborg,DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name Produktion -Path "OU=Svendborg,DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
+
+New-ADOrganizationalUnit -Name Vejle -Path "DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name Marketing -Path "OU=Vejle,DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name Salg -Path "OU=Vejle,DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name Produktion -Path "OU=Vejle,DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
 ```
+Her kan man se de oprettede OU'er
+<br/>
+![de-oprettede-ouer](images/de-oprettede-ouer.png)
