@@ -271,8 +271,10 @@ Får den slettede bruger tilbage med følgende kommando
 ```powershell
 PS C:\> Get-ADObject -filter {displayname -eq "Fornavn013"} –includedeletedobjects | Restore-ADObject
 ```
+
 <br/>
 <br/>
 <br/>
 <br/>
+
 [TOP :arrow_up:](#computer-serverautomatisering-hf2)
