@@ -271,6 +271,9 @@ Får den slettede bruger tilbage med følgende kommando
 ```powershell
 PS C:\> Get-ADObject -filter {displayname -eq "Fornavn013"} –includedeletedobjects | Restore-ADObject
 ```
+Her man man se den slettede bruger er tilbage igen
+<br/>
+![faar-den-slettede-bruger-tilbage](images/faar-den-slettede-bruger-tilbage.png)
 
 <br/>
 <br/>
