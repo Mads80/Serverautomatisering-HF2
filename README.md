@@ -249,3 +249,7 @@ Fjerner mappe
 PS C:\> Remove-Item 'C:\TestMappe' -WhatIf
 What if: Performing the operation "Remove Directory" on target "C:\TestMappe".
 ```
+
+
+
+[TOP :arrow_up:](#computer-Serverautomatisering-HF2)
