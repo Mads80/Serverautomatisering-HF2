@@ -209,6 +209,6 @@ Følgende output bliver printet når scriptet køres. Dette feedback gør at bru
 <br/>
 ![brugeren-er-blevet-tilfoejet](images/brugeren-er-blevet-tilfoejet.png)
 <br/>
-sadfasdf
+Efter scriptet er kørt kan de ny-oprettede brugere ses i AD users and computers:
 <br/>
 ![liste-af-nyoprettede-ad-brugere](images/liste-af-nyoprettede-ad-brugere.png)
