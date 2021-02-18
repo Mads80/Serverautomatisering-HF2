@@ -145,7 +145,7 @@ Efter en genstart er det nye navn trådt i kraft
 
 <!-------------------------------------------------------------------- DEL-16 -------------------------------------------------------------------------------------->
 ## [Del-16 // Øget sikkerhed](#computer-Serverautomatisering-HF2)
-Opretter en liste over kørende services, sorteret alfabetisk og gemmer den som [service.txt]. Filen ligger i C:/Administrator/ da listen laves i .\ som repræsenterer det sted man står i PowerShell. (Service.txt)
+Opretter en liste over kørende services, sorteret alfabetisk og gemmer den som [service.txt](Service.txt). Filen ligger i C:/ da listen laves i .\ som repræsenterer det sted man står i PowerShell.
 ```powershell
 PS C:\> Get-Service | Sort-Object name | Out-File .\Service.txt
 ```
