@@ -256,7 +256,7 @@ Aktiverer ```Recycle Bin Feature``` på Server1
 ```powershell
 Enable-ADOptionalFeature 'Recycle Bin Feature' -Scope ForestOrConfigurationSet -Target jmm.local
 ```
-Se slettede objecter (Har slettet brugeren Fornavn013 via GUI'en)
+Se slettede objecter (Har slettet brugeren ForNavn013 via GUI'en)
 ```powershell
 PS C:\> Get-ADObject -Filter 'isDeleted -eq $true -and Name -like "*DEL:*"' –IncludeDeletedObjects
 
@@ -275,4 +275,4 @@ PS C:\> Get-ADObject -filter {displayname -eq "Fornavn013"} –includedeletedobj
 <br/>
 <br/>
 <br/>
-[TOP :arrow_up:](#computer-Serverautomatisering-HF2)
+[TOP :arrow_up:](#computer-serverautomatisering-hf2)
