@@ -211,4 +211,4 @@ sadfasdfasdf
 <br/>
 sadfasdf
 <br/>
-![ad-brugere-oprettet-liste](images/ad-brugere-oprettet-liste.png)
+![liste-af-nyoprettede-ad-brugere](images/liste-af-nyoprettede-ad-brugere.png)
