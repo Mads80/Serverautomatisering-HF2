@@ -205,7 +205,7 @@ foreach ($User in $Users)
     echo ("Brugeren "+ $UserFirstname +" er blevet tilføjet til AD.")      
 }
 ```
-sadfasdfasdf
+Følgende output bliver printet når scriptet køres. Dette feedback gør at brugeren kan se at der sker noget:
 <br/>
 ![brugeren-er-blevet-tilfoejet](images/brugeren-er-blevet-tilfoejet.png)
 <br/>
