@@ -206,6 +206,7 @@ foreach ($User in $Users)
 }
 ```
 sadfasdfasdf
+<br/>
 ![brugeren-er-blevet-tilfoejet](images/brugeren-er-blevet-tilfoejet.png)
 <br/>
 sadfasdf
