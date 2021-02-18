@@ -6,7 +6,7 @@
 * [Del-12 // Disable Powershell GPO](#del-12--disable-powershell-gpo)
 * [Del-13 // Hjælpefunktioner](#del-13--hjælpefunktioner)
 * [Del-14 // Alias](#del-14--Alias)
-* [Del-15 // Ændrer server navn og tilføjer nye ip-adresser](#del-15--ændrer-server-navn-og-ip-adresse)
+* [Del-15 // Ændrer server navn og tilføjer nye ip-adresser](#del-15--ændrer-server-navn-og-tilføjer-nye-ip-adresser)
 * [Del-16 // Øget sikkerhed](#del-16--øget-sikkerhed)
 * [Del-17 // Mappe script](#del-17--mappe-script)
 * [Del-18 // Opret OU'er](#del-18--opret-ouer)
