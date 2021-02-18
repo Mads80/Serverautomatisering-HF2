@@ -208,6 +208,7 @@ foreach ($User in $Users)
 sadfasdfasdf
 <br/>
 ![brugeren-er-blevet-tilfoejet](images/brugeren-er-blevet-tilfoejet.png)
+<br/>
 sadfasdf
 <br/>
-![ad-brugere-oprettet-liste2](images/ad-brugere-oprettet-liste2.png)
+![ad-brugere-oprettet-liste](images/ad-brugere-oprettet-liste.png)
