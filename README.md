@@ -189,7 +189,16 @@ Her kan man se de oprettede OU'er
 
 <!-------------------------------------------------------------------- DEL-18 -------------------------------------------------------------------------------------->
 ## [Del-19 // Opret AD-brugere](#computer-Serverautomatisering-HF2)
-
+For at anvende CSV i vores Powershell script, opretter vi et .csv dokument som hedder [Ansatte.csv](#Ansatte.csv) der ligger i C:\Scripts.
+Her skriver vi hvad vi vil have med af varibler I øverste linje og under det kommer så alt data på de 35 brugere som passer til de ovenstående variabler.
+<br/>
+<br/>
+I scriptet angiver vi hvor den skal tage data fra, til de Users som skal oprettes. Det er vigtigt med ```–Delimiter ","```, da den angiver afgrænseren der adskiller vores data i CSV-filen. 
+Vi tilføjer samtidig nogle linjer, som før at password bliver krypteret og at brugeren bliver enablet, samt at de skal lave et nyt password når de logger på.
+Brugeren får udfyldt, navn, efternavn, office, mail, description og password.
+Som sidste linje har vi en echo som sørger for vi får udskrevet en tekst ud fra hver bruger som bliver oprettet.
+<br/>
+<br/>
 ```powershell
  $Users = Import-Csv -Delimiter "," -Path "C:\Scripts\Ansatte.csv"        
 foreach ($User in $Users)
