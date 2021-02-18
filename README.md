@@ -205,3 +205,8 @@ foreach ($User in $Users)
     echo ("Brugeren "+ $UserFirstname +" er blevet tilføjet til AD.")      
 }
 ```
+sadfasdfasdf
+![brugeren-er-blevet-tilfoejet](images/brugeren-er-blevet-tilfoejet.png)
+<br/>
+sadfasdf
+![ad-brugere-oprettet-liste](images/ad-brugere-oprettet-liste.png)
