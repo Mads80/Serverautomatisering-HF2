@@ -17,6 +17,7 @@
 * [Del-23 // ?](#del-23)
 * [Del-24 // ?](#del-24)
 
+
 <!-------------------------------------------------------------------- DEL-12 -------------------------------------------------------------------------------------->
 ## [Del-12 // Disable Powershell GPO](#computer-Serverautomatisering-HF2)
 Opretter en ny GPO og går til følgende:
@@ -29,6 +30,7 @@ Click på "Show..." og skriv powershell.exe
 <br/>
 Vores "Disable Powershell" GPO gælder alle Authenticated Users
 ![powershell-disabled](images/powershell-disabled.png)
+
 
 <!-------------------------------------------------------------------- DEL-13 -------------------------------------------------------------------------------------->
 ## [Del-13 // Hjælpefunktioner](#computer-Serverautomatisering-HF2)
@@ -67,6 +69,7 @@ Name: OU1
 Den nyoprettede OU
 <br/>
 ![opretter-ny-ou-med-ps](images/opretter-ny-ou-med-ps.png)
+
 
 <!-------------------------------------------------------------------- DEL-14 -------------------------------------------------------------------------------------->
 ## [Del-14 // Alias](#computer-Serverautomatisering-HF2)
@@ -107,6 +110,7 @@ CommandType     Name                                               Version    So
 -----------     ----                                               -------    ------
 Alias           np -> notepad.exe
 ```
+
 
 <!-------------------------------------------------------------------- DEL-15 -------------------------------------------------------------------------------------->
 ## [Del-15 // Ændrer server navn og tilføjer nye ip-adresser](#computer-Serverautomatisering-HF2)
@@ -150,6 +154,7 @@ Opretter en liste over kørende services, sorteret alfabetisk og gemmer den som 
 PS C:\> Get-Service | Sort-Object name | Out-File .\Service.txt
 ```
 
+
 <!-------------------------------------------------------------------- DEL-17 -------------------------------------------------------------------------------------->
 ## [Del-17 // Mappe script](#computer-Serverautomatisering-HF2)
 Følgende [script](Create-folders.ps1) opretter mapper angivet i [Foldernames.txt](Foldernames.txt)
@@ -163,6 +168,7 @@ Foreach($folder in Get-Content "$root\Foldernames.txt")
 ```
 ![ps-opretter-mapperne](images/ps-opretter-mapperne.png)
 ![oprettet-mapper](images/oprettet-mapper.png)
+
 
 <!-------------------------------------------------------------------- DEL-18 -------------------------------------------------------------------------------------->
 ## [Del-18 // Opret OU'er](#computer-Serverautomatisering-HF2)
@@ -187,7 +193,8 @@ Her kan man se de oprettede OU'er
 <br/>
 ![de-oprettede-ouer](images/de-oprettede-ouer.png)
 
-<!-------------------------------------------------------------------- DEL-18 -------------------------------------------------------------------------------------->
+
+<!-------------------------------------------------------------------- DEL-19 -------------------------------------------------------------------------------------->
 ## [Del-19 // Opret AD-brugere](#computer-Serverautomatisering-HF2)
 For at anvende CSV i vores Powershell script, opretter vi et .csv dokument som hedder [Ansatte.csv](Ansatte.csv) der ligger i C:\Scripts.
 Her skriver vi hvad vi vil have med af varibler I øverste linje og under det kommer så alt data på de 35 brugere som passer til de ovenstående variabler.
@@ -221,3 +228,25 @@ Følgende output bliver printet når scriptet køres. Dette feedback gør at bru
 Efter scriptet er kørt kan de ny-oprettede brugere ses i AD users and computers:
 <br/>
 ![liste-af-nyoprettede-ad-brugere](images/liste-af-nyoprettede-ad-brugere.png)
+
+
+<!-------------------------------------------------------------------- DEL-20 -------------------------------------------------------------------------------------->
+## [Del-20 // Whatif](#computer-Serverautomatisering-HF2)
+Med ```Whatif``` kan man se resultatet af en kommando inden man vælger at køre den, kommandoen er bliver ikke kørt. På den måde kan vi sikre os at kommadoen gør det vi ønsker og man kan også se hvad kommandoer der ikke genererer noget output gør, når de køres.
+<br/>
+<br/>
+Fjerner AD-User
+<br/>
+```powershell
+PS C:\> Remove-ADUser -Identity ForNavn026 -WhatIf
+What if: Performing the operation "Remove" on target "CN=ForNavn026,CN=Users,DC=jmm,DC=local".
+```
+Opretter folderen "TestMappe"
+![lopretter-testmappe](images/opretter-testmappe.png)
+<br/>
+Fjerner mappe
+<br/>
+```powershell
+PS C:\> Remove-Item 'C:\TestMappe' -WhatIf
+What if: Performing the operation "Remove Directory" on target "C:\TestMappe".
+```
