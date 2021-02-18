@@ -12,7 +12,7 @@
 * [Del-18 // Opret OU'er](#del-18--opret-ouer)
 * [Del-19 // Opret AD-brugere](#del-19--Opret-AD-brugere)
 * [Del-20 // Whatif](#del-20--Whatif)
-* [Del-21 // Windows Recycle Bin](#del-21)
+* [Del-21 // Windows Recycle Bin](#del-21--Windows-Recycle-Bin)
 * [Del-22 // Fjern og tilføj server fra domæne](#del-22)
 * [Del-23 // ?](#del-23)
 * [Del-24 // ?](#del-24)
@@ -250,6 +250,29 @@ PS C:\> Remove-Item 'C:\TestMappe' -WhatIf
 What if: Performing the operation "Remove Directory" on target "C:\TestMappe".
 ```
 
+<!-------------------------------------------------------------------- DEL-21 -------------------------------------------------------------------------------------->
+## [Del-21 // Windows Recycle Bin](#computer-Serverautomatisering-HF2)
+Aktiverer ```Recycle Bin Feature``` på Server1
+```powershell
+Enable-ADOptionalFeature 'Recycle Bin Feature' -Scope ForestOrConfigurationSet -Target jmm.local
+```
+Se slettede objecter (Har slettet brugeren Fornavn013 via GUI'en)
+```powershell
+PS C:\> Get-ADObject -Filter 'isDeleted -eq $true -and Name -like "*DEL:*"' –IncludeDeletedObjects
 
-
+Deleted           : True
+DistinguishedName : CN=ForNavn013\0ADEL:f9a587fb-5d39-4676-ba8c-b6651e74e15f,CN=Deleted Objects,DC=jmm,DC=local
+Name              : ForNavn013
+                    DEL:f9a587fb-5d39-4676-ba8c-b6651e74e15f
+ObjectClass       : user
+ObjectGUID        : f9a587fb-5d39-4676-ba8c-b6651e74e15f
+```
+Får den slettede bruger tilbage med følgende kommando
+```powershell
+PS C:\> Get-ADObject -filter {displayname -eq "Fornavn013"} –includedeletedobjects | Restore-ADObject
+```
+<br/>
+<br/>
+<br/>
+<br/>
 [TOP :arrow_up:](#computer-Serverautomatisering-HF2)
