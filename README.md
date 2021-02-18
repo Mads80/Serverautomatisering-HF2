@@ -10,7 +10,7 @@
 * [Del-16 // Øget sikkerhed](#del-16--øget-sikkerhed)
 * [Del-17 // Mappe script](#del-17--mappe-script)
 * [Del-18 // Opret OU'er](#del-18--opret-ouer)
-* [Del-19 // Automatisering](#del-19)
+* [Del-19 // Opret AD-brugere](#del-19--Opret-AD-brugere)
 * [Del-20 // Whatif](#del-20)
 * [Del-21 // Windows Recycle Bin](#del-21)
 * [Del-22 // Fjern og tilføj server fra domæne](#del-22)
@@ -187,4 +187,21 @@ Her kan man se de oprettede OU'er
 <br/>
 ![de-oprettede-ouer](images/de-oprettede-ouer.png)
 
+<!-------------------------------------------------------------------- DEL-18 -------------------------------------------------------------------------------------->
+## [Del-19 // Opret AD-brugere](#computer-Serverautomatisering-HF2)
 
+```powershell
+ $Users = Import-Csv -Delimiter "," -Path "C:\Scripts\Ansatte.csv"        
+foreach ($User in $Users)
+{               
+    $UserFirstname = $User.FirstName       
+    $UserLastname = $User.LastName
+    $UserMail = $user.Mail
+    $UserPassword = $User.Password
+    $UserDescription = $User.Description
+    $UserOffice = $user.Office
+    New-ADUser -Name "$UserFirstname" -Office "$UserOffice" -DisplayName "$UserFirstname" -EmailAddress "$UserMail" -GivenName "$UserFirstname" -Surname "$UserLastname" -Description "$UserDescription" -AccountPassword (ConvertTo-SecureString $UserPassword -AsPlainText -Force) -Enabled $true -ChangePasswordAtLogon $true -server jmm.local
+    
+    echo ("Brugeren "+ $UserFirstname +" er blevet tilføjet til AD.")      
+}
+```
