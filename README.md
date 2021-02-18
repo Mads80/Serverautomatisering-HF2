@@ -189,7 +189,7 @@ Her kan man se de oprettede OU'er
 
 <!-------------------------------------------------------------------- DEL-18 -------------------------------------------------------------------------------------->
 ## [Del-19 // Opret AD-brugere](#computer-Serverautomatisering-HF2)
-For at anvende CSV i vores Powershell script, opretter vi et .csv dokument som hedder [Ansatte.csv](#Ansatte.csv) der ligger i C:\Scripts.
+For at anvende CSV i vores Powershell script, opretter vi et .csv dokument som hedder [Ansatte.csv](Ansatte.csv) der ligger i C:\Scripts.
 Her skriver vi hvad vi vil have med af varibler I øverste linje og under det kommer så alt data på de 35 brugere som passer til de ovenstående variabler.
 <br/>
 <br/>
