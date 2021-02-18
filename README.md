@@ -11,7 +11,7 @@
 * [Del-17 // Mappe script](#del-17--mappe-script)
 * [Del-18 // Opret OU'er](#del-18--opret-ouer)
 * [Del-19 // Opret AD-brugere](#del-19--Opret-AD-brugere)
-* [Del-20 // Whatif](#del-20)
+* [Del-20 // Whatif](#del-20--Whatif)
 * [Del-21 // Windows Recycle Bin](#del-21)
 * [Del-22 // Fjern og tilføj server fra domæne](#del-22)
 * [Del-23 // ?](#del-23)
@@ -245,7 +245,6 @@ Opretter folderen "TestMappe"
 ![lopretter-testmappe](images/opretter-testmappe.png)
 <br/>
 Fjerner mappe
-<br/>
 ```powershell
 PS C:\> Remove-Item 'C:\TestMappe' -WhatIf
 What if: Performing the operation "Remove Directory" on target "C:\TestMappe".
