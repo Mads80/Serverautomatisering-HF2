@@ -21,7 +21,7 @@
 ## [Del-12 // Disable Powershell GPO](#computer-Serverautomatisering-HF2)
 Opretter en ny GPO og går til følgende:
 ```powershell
-User Configuration > Administrative Templates > System > Don’t run specified Windows applications
+User Configuration > Policies > Administrative Templates > System > Don’t run specified Windows applications
 ```
 Click på "Show..." og skriv powershell.exe
 <br/>
@@ -109,8 +109,8 @@ Alias           np -> notepad.exe
 ```
 
 <!-------------------------------------------------------------------- DEL-15 -------------------------------------------------------------------------------------->
-## [Del-15 // Ændrer server navn og ip-adresse](#computer-Serverautomatisering-HF2)
-Ændrer ip-adresse på Server2 og Server3
+## [Del-15 // Ændrer server navn og tilføjer nye ip-adresser](#computer-Serverautomatisering-HF2)
+Tilføjer IP-addresse lokalt på hhv. server2 og server3
 ```powershell
 PS C:\> Get-NetAdapter
 
