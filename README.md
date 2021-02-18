@@ -166,7 +166,7 @@ Foreach($folder in Get-Content "$root\Foldernames.txt")
 
 <!-------------------------------------------------------------------- DEL-18 -------------------------------------------------------------------------------------->
 ## [Del-18 // Opret OU'er](#computer-Serverautomatisering-HF2)
-Der oprettes OU'er for hver afdeling, under hver by, manuelt:
+Der oprettes OU'er for hver afdeling, under hver by, manuelt. De er oprettet med ProtectionFromAccidentalDeletion = false da det er et testsetup hvor man har mulighed for at slette OU'er.
 ```powershell
 New-ADOrganizationalUnit -Name Odense -Path "DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
 New-ADOrganizationalUnit -Name Marketing -Path "OU=Odense,DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
