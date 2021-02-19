@@ -297,7 +297,7 @@ Her man man se den slettede bruger er tilbage igen
 
 
 <!-------------------------------------------------------------------- DEL-22 -------------------------------------------------------------------------------------->
-## [Del-22 // Windows Recycle Bin](#computer-Serverautomatisering-HF2)
+## [Del-22 // Fjern og tilføj server fra domæne](#computer-Serverautomatisering-HF2)
 
 Fjerner Server002 fra domænet
 ```powershell
