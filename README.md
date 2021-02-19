@@ -327,7 +327,7 @@ Display Name                                            Name                    
 ```
 
 ```powershell
-PS C:\Users\Administrator> Install-WindowsFeature -Name DHCP -IncludeManagementTools
+PS C:\> Install-WindowsFeature -Name DHCP -IncludeManagementTools
 
 Success Restart Needed Exit Code      Feature Result
 ------- -------------- ---------      --------------
