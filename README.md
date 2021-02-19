@@ -14,7 +14,7 @@
 * [Del-20 // Whatif](#del-20--Whatif)
 * [Del-21 // Windows Recycle Bin](#del-21--Windows-Recycle-Bin)
 * [Del-22 // Fjern og tilføj server fra domæne](#del-22--Fjern-og-tilføj-server-fra-domæne)
-* [Del-23 // ?](#del-23)
+* [Del-23 // DHCP](#del-23--dhcp)
 * [Del-24 // ?](#del-24)
 
 
@@ -299,17 +299,32 @@ Her man man se den slettede bruger er tilbage igen
 <!-------------------------------------------------------------------- DEL-22 -------------------------------------------------------------------------------------->
 ## [Del-22 // Fjern og tilføj server fra domæne](#computer-Serverautomatisering-HF2)
 
+
 Fjerner Server002 fra domænet
 ```powershell
 Remove-Computer -UnjoinDomaincredential jmm.local\Administrator -PassThru -Verbose -Restart
 ```
 ![fjerner-server002-fra-domain2](images/fjerner-server002-fra-domain2.png)
 <br/>
+<br/>
 Tilføjer Server002 til domænet igen med følgende cmdlet
 ```powershell
 Add-Computer -DomainName jmm.local -Restart
 ```
 ![add-computer-to-domain](images/add-computer-to-domain.png)
+
+
+<!-------------------------------------------------------------------- DEL-23 -------------------------------------------------------------------------------------->
+## [Del-23 // DHCP](#computer-Serverautomatisering-HF2)
+
+
+```powershell
+PS C:\Users\Administrator> Get-WindowsFeature -Name dhc*
+
+Display Name                                            Name                       Install State
+------------                                            ----                       -------------
+[ ] DHCP Server                                         DHCP                           Available
+```
 
 <br/>
 <br/>
