@@ -13,13 +13,15 @@
 * [Del-19 // Opret AD-brugere](#del-19--Opret-AD-brugere)
 * [Del-20 // Whatif](#del-20--Whatif)
 * [Del-21 // Windows Recycle Bin](#del-21--Windows-Recycle-Bin)
-* [Del-22 // Fjern og tilføj server fra domæne](#del-22)
+* [Del-22 // Fjern og tilføj server fra domæne](#del-22--Fjern-og-tilføj-server-fra-domæne)
 * [Del-23 // ?](#del-23)
 * [Del-24 // ?](#del-24)
 
 
 <!-------------------------------------------------------------------- DEL-12 -------------------------------------------------------------------------------------->
 ## [Del-12 // Disable Powershell GPO](#computer-Serverautomatisering-HF2)
+
+
 Opretter en ny GPO og går til følgende:
 ```powershell
 User Configuration > Policies > Administrative Templates > System > Don’t run specified Windows applications
@@ -34,6 +36,8 @@ Vores "Disable Powershell" GPO gælder alle Authenticated Users
 
 <!-------------------------------------------------------------------- DEL-13 -------------------------------------------------------------------------------------->
 ## [Del-13 // Hjælpefunktioner](#computer-Serverautomatisering-HF2)
+
+
 En cmdlet - udtalt "command-let" er en lille, let kommando, der bruges i Windows PowerShell-miljøet. En cmdlet findes typisk som et lille script, der er beregnet til at udføre en enkelt specifik funktion, såsom coping filer og skift af mapper. En cmdlet og dens relevante parametre kan indtastes i en PowerShell-kommandolinje til øjeblikkelig udførelse eller inkluderes som en del af et længere PowerShell-script, der kan udføres som ønsket.
 <br/>
 <br/>
@@ -73,6 +77,8 @@ Den nyoprettede OU
 
 <!-------------------------------------------------------------------- DEL-14 -------------------------------------------------------------------------------------->
 ## [Del-14 // Alias](#computer-Serverautomatisering-HF2)
+
+
 Et PowerShell-alias er et andet navn, der er tildelt en cmdlet. PowerShell-cmdletnavne kan være besværlig at skrive og bruge. For at minimere indtastning og for at gøre det lettere for brugere der er vant til andre shells som f.eks. CMD eller Unix-shells, understøtter Windows PowerShell begrebet et alias. Simpelthen alias er et alternativt navn til en cmdlet.
 <br/>
 <br/>
@@ -114,6 +120,8 @@ Alias           np -> notepad.exe
 
 <!-------------------------------------------------------------------- DEL-15 -------------------------------------------------------------------------------------->
 ## [Del-15 // Ændrer server navn og tilføjer nye ip-adresser](#computer-Serverautomatisering-HF2)
+
+
 Tilføjer IP-addresse lokalt på hhv. server2 og server3
 ```powershell
 PS C:\> Get-NetAdapter
@@ -149,6 +157,8 @@ Efter en genstart er det nye navn trådt i kraft
 
 <!-------------------------------------------------------------------- DEL-16 -------------------------------------------------------------------------------------->
 ## [Del-16 // Øget sikkerhed](#computer-Serverautomatisering-HF2)
+
+
 Opretter en liste over kørende services, sorteret alfabetisk og gemmer den som [service.txt](Service.txt). Filen ligger i C:/ da listen laves i .\ som repræsenterer det sted man står i PowerShell.
 ```powershell
 PS C:\> Get-Service | Sort-Object name | Out-File .\Service.txt
@@ -157,6 +167,8 @@ PS C:\> Get-Service | Sort-Object name | Out-File .\Service.txt
 
 <!-------------------------------------------------------------------- DEL-17 -------------------------------------------------------------------------------------->
 ## [Del-17 // Mappe script](#computer-Serverautomatisering-HF2)
+
+
 Følgende [script](Create-folders.ps1) opretter mapper angivet i [Foldernames.txt](Foldernames.txt)
 ```powershell
 $root = "C:\DFSRoots\MarketingDocs\Byer"
@@ -172,6 +184,8 @@ Foreach($folder in Get-Content "$root\Foldernames.txt")
 
 <!-------------------------------------------------------------------- DEL-18 -------------------------------------------------------------------------------------->
 ## [Del-18 // Opret OU'er](#computer-Serverautomatisering-HF2)
+
+
 Der oprettes OU'er for hver afdeling, under hver by, manuelt. De er oprettet med "-ProtectedFromAccidentalDeletion $false" da dette er et testsetup, hvor man har mulighed for at slette OU'er.
 ```powershell
 New-ADOrganizationalUnit -Name Odense -Path "DC=jmm,DC=local" -ProtectedFromAccidentalDeletion $false
@@ -196,6 +210,8 @@ Her kan man se de oprettede OU'er
 
 <!-------------------------------------------------------------------- DEL-19 -------------------------------------------------------------------------------------->
 ## [Del-19 // Opret AD-brugere](#computer-Serverautomatisering-HF2)
+
+
 For at anvende CSV i vores Powershell script, opretter vi et .csv dokument som hedder [Ansatte.csv](Ansatte.csv) der ligger i C:\Scripts.
 Her skriver vi hvad vi vil have med af varibler I øverste linje og under det kommer så alt data på de 35 brugere som passer til de ovenstående variabler.
 <br/>
@@ -232,6 +248,8 @@ Efter scriptet er kørt kan de ny-oprettede brugere ses i AD users and computers
 
 <!-------------------------------------------------------------------- DEL-20 -------------------------------------------------------------------------------------->
 ## [Del-20 // Whatif](#computer-Serverautomatisering-HF2)
+
+
 Med ```Whatif``` kan man se resultatet af en kommando inden man vælger at køre den, kommandoen er bliver ikke kørt. På den måde kan vi sikre os at kommadoen gør det vi ønsker og man kan også se hvad kommandoer der ikke genererer noget output gør, når de køres.
 <br/>
 <br/>
@@ -252,6 +270,8 @@ What if: Performing the operation "Remove Directory" on target "C:\TestMappe".
 
 <!-------------------------------------------------------------------- DEL-21 -------------------------------------------------------------------------------------->
 ## [Del-21 // Windows Recycle Bin](#computer-Serverautomatisering-HF2)
+
+
 Aktiverer ```Recycle Bin Feature``` på Server1
 ```powershell
 Enable-ADOptionalFeature 'Recycle Bin Feature' -Scope ForestOrConfigurationSet -Target jmm.local
@@ -274,14 +294,22 @@ PS C:\> Get-ADObject -filter {displayname -eq "Fornavn013"} –includedeletedobj
 Her man man se den slettede bruger er tilbage igen
 <br/>
 ![faar-den-slettede-bruger-tilbage](images/faar-den-slettede-bruger-tilbage.png)
+
+
+<!-------------------------------------------------------------------- DEL-22 -------------------------------------------------------------------------------------->
+## [Del-22 // Windows Recycle Bin](#computer-Serverautomatisering-HF2)
+
 Fjerner Server002 fra domænet
 ```powershell
 Remove-Computer -UnjoinDomaincredential jmm.local\Administrator -PassThru -Verbose -Restart
 ```
+![fjerner-server002-fra-domain](images/fjerner-server002-fra-domain.png)
+<br/>
 Tilføjer Server002 til domænet igen med følgende cmdlet
 ```powershell
 Add-Computer -DomainName jmm.local -Restart
 ```
+![add-computer-to-domain](images/add-computer-to-domain.png)
 
 <br/>
 <br/>
