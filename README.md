@@ -319,11 +319,19 @@ Add-Computer -DomainName jmm.local -Restart
 
 
 ```powershell
-PS C:\Users\Administrator> Get-WindowsFeature -Name dhc*
+PS C:\> Get-WindowsFeature -Name dhc*
 
 Display Name                                            Name                       Install State
 ------------                                            ----                       -------------
 [ ] DHCP Server                                         DHCP                           Available
+```
+
+```powershell
+PS C:\Users\Administrator> Install-WindowsFeature -Name DHCP -IncludeManagementTools
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {DHCP Server, DHCP Server Tools}
 ```
 
 <br/>
