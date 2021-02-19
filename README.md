@@ -303,7 +303,7 @@ Fjerner Server002 fra domænet
 ```powershell
 Remove-Computer -UnjoinDomaincredential jmm.local\Administrator -PassThru -Verbose -Restart
 ```
-![fjerner-server002-fra-domain](images/fjerner-server002-fra-domain.png)
+![fjerner-server002-fra-domain2](images/fjerner-server002-fra-domain2.png)
 <br/>
 Tilføjer Server002 til domænet igen med følgende cmdlet
 ```powershell
