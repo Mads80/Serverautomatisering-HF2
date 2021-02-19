@@ -347,6 +347,7 @@ Noget text her
 Add-DhcpServerInDC  Server1 192.168.10.1
 ```
 Noget text her
+<br/>
 ![dhcp-jmmscope](images/dhcp-jmmscope.png)
 
 
