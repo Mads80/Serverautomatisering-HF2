@@ -342,6 +342,10 @@ Noget text her
 ```powershell
 PS C:\> Set-DhcpServerv4Optionvalue -computername Server1 -Router 192.168.10.1 -dnsserver 192.168.10.1 -DnsDomain jmm.local
 ```
+Noget text her
+```powershell
+Add-DhcpServerInDC  Server1 192.168.10.1
+```
 
 <br/>
 <br/>
