@@ -346,6 +346,9 @@ Noget text her
 ```powershell
 Add-DhcpServerInDC  Server1 192.168.10.1
 ```
+Noget text her
+![dhcp-jmmscope](images/dhcp-jmmscope.png)
+
 
 <br/>
 <br/>
