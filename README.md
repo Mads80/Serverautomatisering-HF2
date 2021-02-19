@@ -318,6 +318,7 @@ Add-Computer -DomainName jmm.local -Restart
 ## [Del-23 // DHCP](#computer-Serverautomatisering-HF2)
 
 
+Noget text her
 ```powershell
 PS C:\> Get-WindowsFeature -Name dhc*
 
@@ -325,7 +326,7 @@ Display Name                                            Name                    
 ------------                                            ----                       -------------
 [ ] DHCP Server                                         DHCP                           Available
 ```
-
+Noget text her
 ```powershell
 PS C:\> Install-WindowsFeature -Name DHCP -IncludeManagementTools
 
@@ -333,9 +334,13 @@ Success Restart Needed Exit Code      Feature Result
 ------- -------------- ---------      --------------
 True    No             Success        {DHCP Server, DHCP Server Tools}
 ```
-
+Noget text her
 ```powershell
 PS C:\> Add-DhcpServerv4Scope -ComputerName Server1 -Name “jmmscope” -StartRange 192.168.10.50 -EndRange 192.168.10.100 -SubnetMask 255.255.255.0 -LeaseDuration 0:12:0:0
+```
+Noget text her
+```powershell
+PS C:\> Set-DhcpServerv4Optionvalue -computername Server1 -Router 192.168.10.1 -dnsserver 192.168.10.1 -DnsDomain jmm.local
 ```
 
 <br/>
