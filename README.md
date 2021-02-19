@@ -274,6 +274,14 @@ PS C:\> Get-ADObject -filter {displayname -eq "Fornavn013"} –includedeletedobj
 Her man man se den slettede bruger er tilbage igen
 <br/>
 ![faar-den-slettede-bruger-tilbage](images/faar-den-slettede-bruger-tilbage.png)
+Fjerner Server002 fra domænet
+```powershell
+Remove-Computer -UnjoinDomaincredential jmm.local\Administrator -PassThru -Verbose -Restart
+```
+Tilføjer Server002 til domænet igen med følgende cmdlet
+```powershell
+Add-Computer -DomainName jmm.local -Restart
+```
 
 <br/>
 <br/>
