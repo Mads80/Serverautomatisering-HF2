@@ -334,6 +334,10 @@ Success Restart Needed Exit Code      Feature Result
 True    No             Success        {DHCP Server, DHCP Server Tools}
 ```
 
+```powershell
+PS C:\> Add-DhcpServerv4Scope -ComputerName Server1 -Name “jmmscope” -StartRange 192.168.10.50 -EndRange 192.168.10.100 -SubnetMask 255.255.255.0 -LeaseDuration 0:12:0:0
+```
+
 <br/>
 <br/>
 <br/>
