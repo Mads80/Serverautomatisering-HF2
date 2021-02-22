@@ -353,7 +353,7 @@ Noget text her
 
 <!-------------------------------------------------------------------- DEL-24 -------------------------------------------------------------------------------------->
 ## [Del-24 // FSMO roller](#computer-Serverautomatisering-HF2)
-
+Ved at køre følgende kommando kan vi se hvilke FSMO-roller vores DC har
 ```powershell
 PS C:\> Netdom query FSMO
 Schema master               Server1.jmm.local
