@@ -369,7 +369,8 @@ RID pool manager            Server1.jmm.local
 Infrastructure master       Server1.jmm.local
 The command completed successfully.
 ```
-Schema master
+Schema maste
+------------
 <br/>
 Schema-master rollen styrer alle opdateringer og ændringer af skemaet - ting som medarbejder-id, telefonnummer, e-mail-adresse og loginnavn. Når skemaopdateringen er afsluttet, replikeres den fra schema-masteren til alle andre DC'er i biblioteket.
 
