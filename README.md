@@ -317,8 +317,9 @@ Add-Computer -DomainName jmm.local -Restart
 <!-------------------------------------------------------------------- DEL-23 -------------------------------------------------------------------------------------->
 ## [Del-23 // DHCP](#computer-Serverautomatisering-HF2)
 
+Da DHCP allerede er installeret på Server1 fra tidligere opgave afinstallere vi det gennem GUI og genstarter maskinen. EFterfølgende åbner vi Powershell  og kører følgende kommandoer.
 
-Noget text her
+Først tjekker vi at DHCP featuren kan installeres:
 ```powershell
 PS C:\> Get-WindowsFeature -Name dhc*
 
@@ -326,7 +327,8 @@ Display Name                                            Name                    
 ------------                                            ----                       -------------
 [ ] DHCP Server                                         DHCP                           Available
 ```
-Noget text her
+
+Vi kører installations-kommandoen for at hente DHCP:
 ```powershell
 PS C:\> Install-WindowsFeature -Name DHCP -IncludeManagementTools
 
@@ -334,19 +336,21 @@ Success Restart Needed Exit Code      Feature Result
 ------- -------------- ---------      --------------
 True    No             Success        {DHCP Server, DHCP Server Tools}
 ```
-Noget text her
+DHCP serveren konfigureres.
+
+Her konfigurere vi vores DHCP scope:
 ```powershell
 PS C:\> Add-DhcpServerv4Scope -ComputerName Server1 -Name “jmmscope” -StartRange 192.168.10.50 -EndRange 192.168.10.100 -SubnetMask 255.255.255.0 -LeaseDuration 0:12:0:0
 ```
-Noget text her
+Derefter angives default gateway, dns server og domæne:
 ```powershell
 PS C:\> Set-DhcpServerv4Optionvalue -computername Server1 -Router 192.168.10.1 -dnsserver 192.168.10.1 -DnsDomain jmm.local
 ```
-Noget text her
+Her tilføjes den maskine som kører DHCP serveren til Active Directory:
 ```powershell
 Add-DhcpServerInDC  Server1 192.168.10.1
 ```
-Noget text her
+Gennem GUI kan vi se at scopet er blevet oprettet med den rigtige konfiguration:
 <br/>
 ![dhcp-jmmscope](images/dhcp-jmmscope.png)
 
