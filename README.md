@@ -369,13 +369,33 @@ RID pool manager            Server1.jmm.local
 Infrastructure master       Server1.jmm.local
 The command completed successfully.
 ```
+
 Schema master
 -------------
 Schema-master rollen styrer alle opdateringer og ændringer af skemaet - ting som medarbejder-id, telefonnummer, e-mail-adresse og loginnavn. Når skemaopdateringen er afsluttet, replikeres den fra schema-masteren til alle andre DC'er i biblioteket.
 
+Domain naming master
+--------------------
+Domain naming master sørger for at man ikke laver et andet domain med samme navn I samme forest.
+
+Primary Domain Controller (PDC)
+---
+Den DC med den primære domain controller emulator rolle (PDC Emulator) er den bestemmende domain controller i domænet. PDC emulatoren besvarer authentication forespørgsler, ændre kodeord og administrerer GPO’er.
+
+RID pool manager
+----------------
+Relative ID master, er ansvarlig for RID pool for alle domain controller I et domain. Når man laver en bruger eller group, får de automatisk et security ID også kaldet SID. Alle SID på et domain er de samme, så for at gøre det mere unikt for alle bruger et relative ID også kaldet RID.  RID masteren giver derfor de sidste blocks af secuity til et SID.
+
+Infrastructure master
+---------------------
+Infrastructure master er en oversætter mellem globally unique identifiers (GUIDs), security identifiers (SIDs), and distinguished names (DNs) for objekter der er i et fremmed domæne.
+
+
 <br/>
 <br/>
 <br/>
 <br/>
 
+
 [TOP :arrow_up:](#computer-serverautomatisering-hf2)
+
