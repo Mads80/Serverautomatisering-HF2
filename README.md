@@ -352,7 +352,7 @@ Noget text her
 
 
 <!-------------------------------------------------------------------- DEL-24 -------------------------------------------------------------------------------------->
-## [Del-24 FSMO roller// ](#computer-Serverautomatisering-HF2)
+## [Del-24 // FSMO roller](#computer-Serverautomatisering-HF2)
 
 ```powershell
 PS C:\> Netdom query FSMO
