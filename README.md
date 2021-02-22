@@ -357,6 +357,8 @@ Gennem GUI kan vi se at scopet er blevet oprettet med den rigtige konfiguration:
 
 <!-------------------------------------------------------------------- DEL-24 -------------------------------------------------------------------------------------->
 ## [Del-24 // FSMO roller](#computer-Serverautomatisering-HF2)
+
+
 Ved at køre følgende kommando kan vi se hvilke FSMO-roller vores DC har
 ```powershell
 PS C:\> Netdom query FSMO
@@ -367,6 +369,9 @@ RID pool manager            Server1.jmm.local
 Infrastructure master       Server1.jmm.local
 The command completed successfully.
 ```
+Schema master
+<br/>
+Schema-master rollen styrer alle opdateringer og ændringer af skemaet - ting som medarbejder-id, telefonnummer, e-mail-adresse og loginnavn. Når skemaopdateringen er afsluttet, replikeres den fra schema-masteren til alle andre DC'er i biblioteket.
 
 <br/>
 <br/>
