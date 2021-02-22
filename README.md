@@ -15,7 +15,7 @@
 * [Del-21 // Windows Recycle Bin](#del-21--Windows-Recycle-Bin)
 * [Del-22 // Fjern og tilføj server fra domæne](#del-22--Fjern-og-tilføj-server-fra-domæne)
 * [Del-23 // DHCP](#del-23--dhcp)
-* [Del-24 // ?](#del-24)
+* [Del-24 // FSMO roller](#del-24--FSMO-roller)
 
 
 <!-------------------------------------------------------------------- DEL-12 -------------------------------------------------------------------------------------->
@@ -350,6 +350,19 @@ Noget text her
 <br/>
 ![dhcp-jmmscope](images/dhcp-jmmscope.png)
 
+
+<!-------------------------------------------------------------------- DEL-24 -------------------------------------------------------------------------------------->
+## [Del-24 FSMO roller// ](#computer-Serverautomatisering-HF2)
+
+```powershell
+PS C:\> Netdom query FSMO
+Schema master               Server1.jmm.local
+Domain naming master        Server1.jmm.local
+PDC                         Server1.jmm.local
+RID pool manager            Server1.jmm.local
+Infrastructure master       Server1.jmm.local
+The command completed successfully.
+```
 
 <br/>
 <br/>
